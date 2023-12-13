@@ -1,9 +1,17 @@
+@font-face{
+     font-family: "Hanken Grotesk Variable";
+    src: url("/assets/fonts/HankenGrotesk-VariableFont_wght.ttf") ;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Hanken Grotesk Variable";
 }
-
+p{
+    font-size: 18px;
+}
 main {
     display: grid;
     justify-content: center;
@@ -23,16 +31,22 @@ main {
 .result {
     text-transform: capitalize;
     height: 100%;
+    width: 330px;
     border-radius: 20px;
     background: linear-gradient(180deg, hsl(252, 100%, 67%) 5%, hsl(241, 81%, 54%) 100%);
 }
 
-.result h3 {
+.result .title  {
     padding: 20px;
+    /* font-size: 18px; */
+    font-weight: 700;
+}
+.result .title{
+    color: hsla(221, 100%, 96%, 0.7);
 }
 .circle {
-    width: 45%;
-    height: 45%;
+    width: 150px;
+    height: 150px;
     margin: auto;
     padding: 50px;
     border-radius: 50%;
@@ -40,15 +54,37 @@ main {
 }
 .circle #value{
   font-size: 54px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  
+}
+.circle #pp{
+    width: 100%;
+}
+.description h1{
+    color: white;
+    margin: 15px;
+}
+.description p{
+    margin: 0 auto;
+    text-align: center;
+    width: 270px;
 }
 .summary {
     text-align: left;
+    width: 330px;
     box-shadow: 5px 10px 5px hwb(169 78% 13%);
     border-radius: 20px;
     text-transform: capitalize;
 }
-.summary h3 {
-    padding: 20px;    
+.summary .title  {
+    margin-left: 30px;
+    padding-top: 20px;
+    /* font-size: 18px; */
+    font-weight: 700;
+}
+.summary .par{
+    margin: 30px;
 }
 .summary .par img{
   margin-right: 10px;  
@@ -59,6 +95,8 @@ main {
     margin-bottom: 5px; 
     display: flex;
     align-items: center;  
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .summary button{
@@ -66,7 +104,16 @@ main {
     padding: 15px;
     width: 80%;
     border-radius: 30px;
-    margin: 30px 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    background: linear-gradient(180deg, hsla(256, 72%, 46%), hsla(241, 72%, 46%));
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+.summary .btn:hover{
+    background-color: hsl(224, 30%, 27%);
 }
 .summary .par #p1{
     background-color: hsla(0, 100%, 67%, 0.1);

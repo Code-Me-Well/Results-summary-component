@@ -28,6 +28,7 @@ main {
     border-radius: 20px;
     box-shadow: 5px 10px 10px hwb(169 78% 13%);
     background: linear-gradient(180deg, hsl(252, 100%, 67%) 5%, hsl(241, 81%, 54%) 100%);
+    /* grid-area: result; */
 }
 .result .title {
     padding: 20px;
@@ -74,6 +75,7 @@ main {
     box-shadow: 5px 10px 5px hwb(174 82% 14%);
     border-radius: 20px;
     text-transform: capitalize;
+    /* grid-area: summary; */
 }
 .summary .title {
     margin-left: 30px;
@@ -147,3 +149,32 @@ main {
     background-color: hsla(234, 85%, 45%, 0.1);
     color: hsl(234, 85%, 45%)
 }
+
+ @media only screen and (min-width: 375px) and (max-width:1440px){
+     .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* grid-template-areas: 
+        "resut result"
+        "summary summary"; */
+        text-align: center;
+        width: 100%;
+        background: white;
+    }
+    body{
+        background-color: grey;
+    }
+    .result{
+        border-radius: 0;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 30px;
+        box-shadow: none;
+        /* grid-area: result; */
+
+    }
+    .summary{
+        border-radius: 0;
+        box-shadow: none;
+        /* grid-area: summary; */
+    }
+} 

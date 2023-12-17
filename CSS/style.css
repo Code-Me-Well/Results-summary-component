@@ -187,7 +187,7 @@ main {
         width: 100%;
         background: white;
         box-shadow: none;
-        border-radius: 0;
+        border-radius: 0;        
     }
 
     body {
@@ -226,8 +226,7 @@ main {
         width: 100%;
         padding: 0px 50px;
         padding-bottom: 30px;
-        font-size: 14px;
-        
+        font-size: 14px;    
     }
 
     .summary {
@@ -252,5 +251,11 @@ main {
     }
     .summary .parr-parent .parr1{
         margin-top: 20px;
+    }
+    .credit{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        position: relative;
     }
 }

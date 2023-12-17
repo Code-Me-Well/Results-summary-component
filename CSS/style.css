@@ -255,7 +255,6 @@ main {
     .credit{
         display: flex;
         justify-content: center;
-        margin-top: 10px;
         position: relative;
     }
 }

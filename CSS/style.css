@@ -25,20 +25,20 @@ main {
     border-radius: 20px;
 }
 
-.result {
+.result-card {
     text-transform: capitalize;
     width: 300px;
     border-radius: 20px;
     background: linear-gradient(180deg, hsl(252, 100%, 67%) 5%, hsl(241, 81%, 54%) 100%);
 }
 
-.result .title {
+.result-title {
     padding: 20px;
     font-weight: 500;
     color: hsla(221, 100%, 96%, 0.8);
 }
 
-.circle {
+.score-circle {
     width: 130px;
     height: 130px;
     margin: auto;
@@ -47,47 +47,34 @@ main {
     border-radius: 50%;
     background: linear-gradient(200deg, hsla(256, 72%, 46%, 7), hsla(241, 72%, 46%, 0));
 }
-
-.circle #value {
+#result-score {
     font-size: 46px;
     font-weight: 700;
     color: hsl(0, 0%, 100%);
 
 }
-
-.circle #pp {
+#result-total {
     width: 100%;
     color: hsla(221, 100%, 96%, 0.7);
     text-transform: none;
 }
-
-.result .description {
+.result-description {
     color: hsla(221, 100%, 96%, 0.7);
 }
 
-.description h1 {
+.result-description h1 {
     color: white;
     margin: 15px;
     font-weight: 500;
 }
 
-.description p {
+.result-description p {
     margin: 0 auto;
     text-align: center;
     width: 230px;
     text-transform: none;
 }
-.credit{
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform:translateX(-50%) translateY(-50%);  
-    box-shadow: 3px 3px 70px hwb(174 82% 14%);
-}
-.credit a{
-    text-decoration: none;
-}
-.summary {
+.summary-section {
     text-align: left;
     width: 300px;
     border-radius: 20px;
@@ -95,27 +82,26 @@ main {
     text-transform: capitalize;
 }
 
-.summary .title {
+.summary-title {
     margin-left: 30px;
     padding-top: 20px;
     font-weight: 800;
     color: hsl(224, 30%, 27%);
 
 }
-
-.summary .par {
+.skill-container {
     margin-left: 30px;
     margin-right: 30px;
     font-weight: 700;
 }
 
-.summary .parr-parent {
+.skill-card-container {
     width: 100%;
     border-radius: 10px;
     background-color: hsl(0, 78%, 2%);
 }
 
-.summary .parr-parent .parr {
+.skill-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,46 +109,46 @@ main {
     border-radius: 10px;
     margin-bottom: 15px;
 }
-.summary .parr-parent .parr1{
+.skill-card1{
     background: #fff1f0 !important;
     color: hsl(0, 100%, 67%) !important;
     margin-top: 30px;
 }
-.summary .parr-parent .parr2{
+.skill-card2{
     background: hsl(40, 83%, 93%) !important;
     color: hsl(39, 100%, 56%) !important;
 }
-.summary .parr-parent .parr3{
+.skill-card3{
     background: hsl(165, 57%, 95%) !important;
     color: hsl(166, 100%, 37%) !important;
 }
-.summary .parr-parent .parr4{
+.skill-card4{
     background: hsl(240, 67%, 98%) !important;
     color: hsl(234, 85%, 45%) !important;
 }
-.summary .par img {
+.skill-card img {
     margin-right: 10px;
 }
 
-.summary .parr span:nth-child(1) {
+.skill-card span:nth-child(1) {
     display: flex;
     align-items: center;
 }
 
-.summary .parr .sp {
+.skill-score {
     display: flex;
 }
 
-.summary .parr .sp span:nth-child(1) {
+.skill-score span:nth-child(1) {
     color: hsl(224, 30%, 27%);
     font-weight: 800;
 }
 
-.summary .parr .sp span:nth-child(2) {
+.skill-score  span:nth-child(2) {
     color: hsla(224, 30%, 27%, 0.66);
 }
 
-.summary button {
+ button {
     padding: 10px;
     width: 80%;
     border-radius: 30px;
@@ -176,9 +162,19 @@ main {
     font-size: 18px;
     transition: .3s ease-in-out;
 }
-.summary .btn:hover {
+.summary-section .btn:hover {
     background-color: hsl(224, 76%, 40%);
     transform: scale(1.05);
+}
+.credit{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform:translateX(-50%) translateY(-50%);  
+    box-shadow: 3px 3px 70px hwb(174 82% 14%);
+}
+.credit a{
+    text-decoration: none;
 }
 @media screen and (max-width: 400px) {
     .container {
@@ -194,7 +190,7 @@ main {
         background: rgb(34,193,195);
         background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(15,15,86,1) 91%);
     }
-    .result {
+    .result-card {
         border-radius: 0;
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 30px;
@@ -204,7 +200,7 @@ main {
         margin: 0;
     }
 
-    .circle {
+    .score-circle {
         width: 120px;
         height: 120px;
         margin: auto;
@@ -213,23 +209,23 @@ main {
         background: linear-gradient(200deg, hsla(256, 72%, 46%, 7), hsla(241, 72%, 46%, 0));
     }
 
-    .circle #value {
+    #result-score {
         font-size: 42px;
     }
 
-    .description h1 {
+    .result-description h1 {
         font-size: 20px;
         margin-bottom: 5px;
     }
 
-    .description p {
+    .result-description p {
         width: 100%;
         padding: 0px 50px;
         padding-bottom: 30px;
         font-size: 14px;    
     }
 
-    .summary {
+    .summary-section {
         border-radius: 0;
         box-shadow: none;
         width: 320px;
@@ -238,18 +234,18 @@ main {
         margin: 0;
     }
 
-    .summary .title {
+    .summary-title {
         margin-left: 25px;
         padding-top: 20px;
         font-weight: 700;
     }
 
-    .summary .par {
+    .skill-container {
         margin-left: 25px;
         margin-right: 25px;
         font-weight: 700;
     }
-    .summary .parr-parent .parr1{
+    .skill-card1{
         margin-top: 20px;
     }
     .credit{
